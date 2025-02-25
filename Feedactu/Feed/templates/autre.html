@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="ms" id="">
+        <input type="submit" value="poster">
+    </form>
+    <div>
+        {% for P in Ms %}
+            <div> {{P.Ph}} </div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

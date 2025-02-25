@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>Feed-actu</title>
+</head>
+<body>
+    <form action="/" method="POST">
+        {% csrf_token %}
+        <label for="ct"> Entrez votre message</label>
+        <input type="text" name="content" id="ct">
+        <input type="submit" value="Envoyez">
+    </form>
+    
+    <div id="fs">
+        {% for mes in messages %}
+            <div id="container">
+                <div class="username">{{mes.user}} </div>
+                <div class="content">{{mes.content}} </div>
+            </div> 
+            <hr>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

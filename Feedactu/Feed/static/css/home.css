@@ -1,0 +1,13 @@
+#fs {
+    width: 700px;
+    margin: auto;
+
+}
+#container{
+    display: flex;
+    justify-content: center;
+}
+.username{
+    margin-right: 15px;
+    font-weight: bold;
+}
